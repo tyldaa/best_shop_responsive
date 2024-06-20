@@ -1,0 +1,1 @@
+# best_shop_responsive
