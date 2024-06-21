@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables";
+@import "helpers";
+@import "mixins";
+@import "global";
+
+// Specific sections
+@import "header";
+@import "hero";
+@import "statistics";
+@import "benefits";
+@import "plans_cards";
+@import "form_contact";
+@import "footer";
