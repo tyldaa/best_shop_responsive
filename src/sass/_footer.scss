@@ -1,0 +1,38 @@
+.footer {
+  box-shadow: $shadow-4;
+  font-size: 12px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo_content {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 20px 0 17px 0;
+
+    .logo {
+      @extend %logotyp;
+      font-size: 2.16em;
+    }
+
+    .copyright {
+      font-size: 1em;
+      color: $color-gray400;
+    }
+  }
+
+  .footer_social_media {
+    display: flex;
+    gap: 20px;
+  }
+
+  .icon_twitter,
+  .icon_facebook {
+    width: 24px;
+    height: 24px;
+  }
+}

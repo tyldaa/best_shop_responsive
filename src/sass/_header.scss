@@ -1,0 +1,160 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: $shadow-1;
+  width: 100vw;
+  z-index: 10;
+  background: $color-white;
+  font-size: 12px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo_content {
+    margin: 17px 0;
+
+    .logo {
+      @extend %logotyp;
+      font-size: 2.67em;
+    }
+  }
+
+  .hamburger {
+    opacity: 0;
+  }
+
+  @include media($bp-md) {
+    .container {
+      overflow: hidden;
+    }
+
+    &_nav {
+      position: fixed;
+      top: 65px;
+      left: 0;
+      width: 100vw;
+      background: $color-white;
+      transition: transform 0.5s ease-in-out;
+      box-shadow: inset $shadow-1;
+      z-index: 5;
+    }
+
+    .hamburger_checkbox:checked ~ .header_nav {
+      transform: translateY(-150%);
+    }
+
+    .hamburger {
+      opacity: 1;
+      height: 1em;
+      width: 1.66em;
+      position: relative;
+      cursor: pointer;
+      margin-right: 25px;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      left: 5px;
+      width: 100%;
+      height: 2px;
+      background: $color-blue100;
+      transition: 0.5s;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+    }
+    span:nth-child(2) {
+      top: 50%;
+    }
+    span:nth-child(3) {
+      top: 100%;
+    }
+
+    input:not(:checked) ~ label .hamburger span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    input:not(:checked) ~ label .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    input:not(:checked) ~ label .hamburger span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+
+  &_nav_list {
+    display: flex;
+    gap: 71px;
+
+    @include media($bp-md) {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 30px 0;
+      box-shadow: $shadow-1;
+    }
+
+    @media screen and (min-width: 800px) and (max-width: 1050px) {
+      gap: 60px;
+    }
+
+    @media screen and (min-width: 800px) and (max-width: 950px) {
+      gap: 40px;
+    }
+
+    @media screen and (min-width: 800px) and (max-width: 850px) {
+      gap: 30px;
+    }
+  }
+
+  &_nav_list_link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 1em;
+    color: $color-gray400;
+    padding: 28px 12px 27px 12px;
+    letter-spacing: 3.28px;
+    position: relative;
+    transition: 0.55s ease;
+    transform: color;
+
+    @include media($bp-md) {
+      padding: 8px 30px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: $font-weight-bold;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      transition: 0.55s ease;
+      transform: background;
+    }
+
+    &:hover {
+      color: $color-black;
+    }
+
+    &:hover::after {
+      background: $color-blue200;
+
+      @include media($bp-md) {
+        background: unset;
+      }
+    }
+  }
+}

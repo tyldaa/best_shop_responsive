@@ -17,8 +17,16 @@
     <header class="header">
       <div class="container">
         <div class="logo_content">
-          <div class="logo header_logo">BestShop</div>
+          <div class="logo">BestShop</div>
         </div>
+        <input class="hamburger_checkbox" type="checkbox" hidden id="menu" />
+        <label for="menu">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
         <nav class="header_nav">
           <ul class="header_nav_list">
             <li><a class="header_nav_list_link" href="#why_us">Why us</a></li>
@@ -41,7 +49,7 @@
           <a href="" class="primary_button btn--blue">Open your shop</a>
         </div>
       </div>
-      <img src="./images/Background.png" class="hero_background" />
+      <!-- <img src="./images/Background.png" class="hero_background" /> -->
     </section>
 
     <!-- STATISTICS -->
@@ -49,31 +57,31 @@
       <div class="container">
         <h2 class="section_title">The most popular sales platform in country</h2>
         <div class="statistics_columns">
-          <div class="statistic_column column--left">
-            <div class="statistic_photo">
-              <img src="./images/Person.svg" class="statistic_icon icon--left" />
+          <div class="statistics_column column--left">
+            <div class="statistics_photo">
+              <img src="./images/Person.svg" class="statistics_icon icon--left" />
             </div>
-            <div class="statistic_content">
-              <h3 class="statistic_number">100000+</h3>
-              <p class="statistic_description">daily entries</p>
-            </div>
-          </div>
-          <div class="statistic_column column--center">
-            <div class="statistic_photo">
-              <img src="./images/Eye.svg" class="statistic_icon icon--center" />
-            </div>
-            <div class="statistic_content">
-              <h3 class="statistic_number">2000000+</h3>
-              <p class="statistic_description">seen products every day</p>
+            <div class="statistics_content">
+              <h3 class="statistics_number">100000+</h3>
+              <p class="statistics_description">daily entries</p>
             </div>
           </div>
-          <div class="statistic_column column--right">
-            <div class="statistic_photo">
-              <img src="./images/Catalog.svg" class="statistic_icon icon--right" />
+          <div class="statistics_column column--center">
+            <div class="statistics_photo">
+              <img src="./images/Eye.svg" class="statistics_icon icon--center" />
             </div>
-            <div class="statistic_content">
-              <h3 class="statistic_number">10000+</h3>
-              <p class="statistic_description">added posts daily</p>
+            <div class="statistics_content">
+              <h3 class="statistics_number">2000000+</h3>
+              <p class="statistics_description">seen products every day</p>
+            </div>
+          </div>
+          <div class="statistics_column column--right">
+            <div class="statistics_photo">
+              <img src="./images/Catalog.svg" class="statistics_icon icon--right" />
+            </div>
+            <div class="statistics_content">
+              <h3 class="statistics_number">10000+</h3>
+              <p class="statistics_description">added posts daily</p>
             </div>
           </div>
         </div>
@@ -91,8 +99,8 @@
               veniam.
             </p>
           </div>
-          <div class="benefit_photo photo--one">
-            <img src="./images/Macbook.png" class="benefit_photo_img laptop" />
+          <div class="benefit_photo">
+            <img src="./images/Macbook.png" class="laptop" />
           </div>
         </section>
         <section class="benefit benefit--two">
@@ -103,8 +111,8 @@
               veniam.
             </p>
           </div>
-          <div class="benefit_photo photo--two">
-            <img src="./images/iPhone.png" class="benefit_photo_img phone" />
+          <div class="benefit_photo">
+            <img src="./images/iPhone.png" class="phone" />
           </div>
         </section>
         <section class="benefit benefit--three">
@@ -115,8 +123,8 @@
               veniam.
             </p>
           </div>
-          <div class="benefit_photo photo--three">
-            <img src="./images/Trumpet.png" class="benefit_photo_img trumpet" />
+          <div class="benefit_photo">
+            <img src="./images/Trumpet.png" class="trumpet" />
           </div>
         </section>
       </div>
@@ -129,7 +137,7 @@
         <div class="plan_card_options">
           <section class="plan_card card--red">
             <h3 class="plan_card_title">Basic</h3>
-            <span class="plan_price_value">$0</span>
+            <span class="plan_card_price_value">$0</span>
             <ul class="plan_card_list">
               <li class="option_in_plan">100 MB HDD</li>
               <li class="option_in_plan">1 Subdomain</li>
@@ -143,7 +151,7 @@
           </section>
           <section class="plan_card card--blue">
             <h3 class="plan_card_title">Professional</h3>
-            <span class="plan_price_value">$25</span>
+            <span class="plan_card_price_value">$25</span>
             <ul class="plan_card_list">
               <li class="option_in_plan">500 MB HDD</li>
               <li class="option_in_plan">2 Subdomain</li>
@@ -157,7 +165,7 @@
           </section>
           <section class="plan_card card--green">
             <h3 class="plan_card_title">Premium</h3>
-            <span class="plan_price_value">$60</span>
+            <span class="plan_card_price_value">$60</span>
             <ul class="plan_card_list">
               <li class="option_in_plan">2 GB HDD</li>
               <li class="option_in_plan">5 Subdomain</li>
@@ -174,7 +182,7 @@
     </section>
 
     <!-- FORM -->
-    <section id="contact" class="form_questions">
+    <section id="contact" class="form">
       <div class="container">
         <div class="form_info">
           <h2 class="form_title">Any questions?</h2>
@@ -215,7 +223,7 @@
     <footer class="footer">
       <div class="container">
         <div class="logo_content">
-          <div class="logo footer_logo">BestShop</div>
+          <div class="logo">BestShop</div>
           <p class="copyright">© 2019 BestShop LTD, All Rights Reserved</p>
         </div>
         <div class="footer_social_media">

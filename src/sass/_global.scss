@@ -4,6 +4,11 @@
 
 body {
   @extend %font_default;
+  color: $color-black;
+  font-weight: $font-weight-regular;
+
+  @include media($bp-md) {
+  }
 }
 
 .container {
@@ -14,4 +19,28 @@ body {
     width: 100%;
     padding: 0 15px;
   }
+}
+
+// BUTTONS
+%button_base {
+  border-radius: $border-radius-xl;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  background: $color-blue200;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  transition: 0.55s ease;
+  transform: background;
+
+  &:hover {
+    background: #39c6f9;
+  }
+}
+
+%logotyp {
+  font-family: $font-secondary;
+  font-weight: $font-weight-light;
+  color: $color-blue200;
 }

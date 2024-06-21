@@ -1,0 +1,205 @@
+.plans_cards {
+  font-size: 14px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 55px 0;
+
+    @include media($bp-md) {
+      gap: 20px;
+    }
+
+    .section_title {
+      font-size: 2.6em;
+      font-family: $font-secondary;
+    }
+  }
+
+  .plan_card_options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 59px;
+
+    @include media($bp-md) {
+      flex-direction: column;
+    }
+  }
+
+  .plan_card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: $border-radius-m;
+    width: 372px;
+    height: 461px;
+    gap: 20px;
+    padding-top: 34px;
+    position: relative;
+
+    @include media($bp-md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      justify-items: center;
+      align-items: center;
+      padding: 0 10px 0 0;
+      width: 320px;
+      height: 251px;
+    }
+
+    &_title {
+      color: $color-navy;
+      font-family: $font-secondary;
+      font-weight: $font-weight-bold;
+      font-size: 1.4em;
+
+      @include media($bp-md) {
+        margin-bottom: 80px;
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+    }
+
+    &_price_value {
+      font-weight: $font-weight-light;
+      font-size: 3.3em;
+      position: relative;
+
+      @include media($bp-md) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+    }
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 1em;
+      margin-top: 80px;
+
+      @include media($bp-md) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  .card--blue .plan_card_price_value::after,
+  .card--green .plan_card_price_value::after {
+    content: "Limited offer";
+    font-size: 12px;
+    color: $color-navy;
+    font-family: $font-secondary;
+    font-weight: $font-weight-bold;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include media($bp-md) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+
+  .option_in_plan::before,
+  .option_not_in_plan::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+  }
+
+  .option_in_plan::before {
+    content: url(../images/Checkmark-1.svg);
+  }
+
+  .option_not_in_plan::before {
+    content: url(../images/Close.svg);
+  }
+
+  .primary_button {
+    @extend %button_base;
+    padding: 16px 57px;
+    font-size: 1em;
+    border-radius: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  /* plan red */
+
+  .card--red {
+    border: 1px solid $color-pink100;
+
+    .plan_card_price_value {
+      color: $color-pink100;
+    }
+
+    .btn--red {
+      background: $color-pink200;
+
+      &:hover {
+        background: #ed5e80;
+      }
+    }
+  }
+
+  /* plan blue */
+
+  .card--blue {
+    width: 405px;
+    height: 500px;
+    border: 1px solid $color-blue100;
+    box-shadow: $shadow-3;
+
+    @include media($bp-md) {
+      width: 350px;
+      height: 277px;
+    }
+
+    .plan_card_price_value {
+      color: $color-blue100;
+    }
+
+    .plan_card_title {
+      font-size: 1.5em;
+    }
+
+    .plan_card_list {
+      gap: 25px;
+      margin-top: 90px;
+
+      @include media($bp-md) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  /* plan green */
+
+  .card--green {
+    border: 1px solid $color-green;
+
+    .plan_card_price_value {
+      color: $color-green;
+    }
+
+    .btn--green {
+      background: $color-green;
+
+      &:hover {
+        background: #94ebcf;
+      }
+    }
+  }
+}
