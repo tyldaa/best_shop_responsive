@@ -1,0 +1,45 @@
+// COLORS
+$color-white: #ffffff;
+$color-gray100: #f7f7f7;
+$color-gray200: #e8e9ed;
+$color-gray300: #00000029;
+$color-gray400: #a5a5a5;
+$color-gray500: #95989a;
+$color-gray600: #707070;
+$color-light_blue: #07ace629;
+$color-blue100: #07ace6;
+$color-blue200: #08a6e4;
+$color-navy: #13253b;
+$color-light-pink100: #ff091129;
+$color-light-pink200: #f9043629;
+$color-pink100: #fb3b64;
+$color-pink200: #eb476e;
+$color-green: #55dfb4;
+$color-black: #000000;
+
+// FONTS
+$font-family-secondary: "Raleway", sans-serif;
+
+// FONT WEIGHT
+$font-weight-extraBold: 800;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+// SHADOWS
+$shadow-1: 0px 3px 6px $color-gray300;
+$shadow-2: 5px 10px 14px $color-light_blue;
+$shadow-3: 5px 10px 27px $color-light_blue;
+
+// BORDERS
+$border-radius-xs: 4px;
+$border-radius-s: 5px;
+$border-radius-m: 18px;
+$border-radius-l: 35px;
+$border-radius-xl: 40px;
+
+// BREAKPOINTS
+$bp-xs: 375px;
+$bp-md: 800px;
+$bp-xl: 1352px;
