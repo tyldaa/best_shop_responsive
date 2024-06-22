@@ -165,6 +165,7 @@
     @include media($bp-md) {
       width: 350px;
       height: 277px;
+      padding: 0 20px;
     }
 
     .plan_card_price_value {
