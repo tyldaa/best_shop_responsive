@@ -10,6 +10,7 @@ const projectRootPath = "src";
  */
 export default defineConfig({
   root: projectRootPath,
+  base: "/best_shop_responsive/",
   server: {
     port: 3000,
   },
