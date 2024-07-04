@@ -22,7 +22,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    // flex-wrap: wrap;
     gap: 59px;
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
 
     @include media($bp-md) {
       flex-direction: column;
@@ -39,6 +44,10 @@
     gap: 20px;
     padding-top: 34px;
     position: relative;
+
+    @media screen and (max-width: 1300px) and (min-width: 1000px) {
+      max-width: 30vw;
+    }
 
     @include media($bp-md) {
       display: grid;
@@ -161,6 +170,10 @@
     height: 500px;
     border: 1px solid $color-blue100;
     box-shadow: $shadow-3;
+
+    @media screen and (max-width: 1300px) and (min-width: 1000px) {
+      max-width: 30vw;
+    }
 
     @include media($bp-md) {
       width: 350px;
