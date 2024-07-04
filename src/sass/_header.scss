@@ -4,7 +4,7 @@
   left: 0;
   box-shadow: $shadow-1;
   width: 100vw;
-  z-index: 10;
+  z-index: 5;
   background: $color-white;
   font-size: 12px;
 
@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
   }
 
   .logo_content {
@@ -32,18 +33,28 @@
       overflow: hidden;
     }
 
-    &_nav {
-      position: fixed;
+    .hide_nav {
+      width: 100%;
+
+      position: absolute;
       top: 65px;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
+      padding-bottom: 5px;
+    }
+
+    &_nav {
+      position: relative;
+      top: 0;
       left: 0;
       width: 100vw;
       background: $color-white;
       transition: transform 0.5s ease-in-out;
       box-shadow: inset $shadow-1;
-      z-index: 5;
     }
 
-    .hamburger_checkbox:checked ~ .header_nav {
+    .hamburger_checkbox:checked ~ .hide_nav .header_nav {
       transform: translateY(-150%);
     }
 
