@@ -94,6 +94,11 @@
       top: 172px;
       z-index: 1;
 
+      @include media($bp-s) {
+        width: 350px;
+        height: 148px;
+      }
+
       &.active {
         display: block;
       }
@@ -101,6 +106,10 @@
       li {
         padding: 11px 0 11px 20px;
         user-select: none;
+
+        @include media($bp-s) {
+          padding: 18px 0 18px 20px;
+        }
       }
 
       li:hover {
