@@ -183,6 +183,71 @@
       </div>
     </section>
 
+    <!-- CALCULATOR -->
+    <section class="calc">
+      <div class="container">
+        <h2 class="calc_title">Calculate how much you&rsquo;ll pay</h2>
+        <div class="calc_options">
+          <form class="calc_form" action="">
+            <input type="number" name="quantity" id="products_quantity" placeholder="Products quantity" />
+            <input type="number" name="orders" id="orders_month" placeholder="Estimated orders in month" />
+
+            <div class="select_input"><span>Choose package</span><img class="arrow_down" src="./images/Arrow Down.svg" /></div>
+            <ul class="select_dropdown">
+              <li data-value="basic">Basic</li>
+              <li data-value="professional">Professional</li>
+              <li data-value="premium">Premium</li>
+            </ul>
+
+            <label class="accept_checkbox accounting">
+              <input type="checkbox" />
+              <span></span>
+              <p class="selection_description">Accounting</p>
+            </label>
+
+            <label class="accept_checkbox rental_payment">
+              <input type="checkbox" />
+              <span></span>
+              <p class="selection_description">Rental of a payment terminal</p>
+            </label>
+          </form>
+
+          <div class="order_summary">
+            <table class="order_items">
+              <tbody>
+                <tr class="row_quantity">
+                  <td class="item">Products</td>
+                  <td class="item_value"><span>1</span> * $0.5</td>
+                  <td class="result">0</td>
+                </tr>
+                <tr class="row_orders">
+                  <td class="item">Orders</td>
+                  <td class="item_value"><span>1</span> * $0.25</td>
+                  <td class="result">0</td>
+                </tr>
+                <tr class="row_package">
+                  <td class="item">Package</td>
+                  <td class="item_value">Premium</td>
+                  <td class="result">0</td>
+                </tr>
+                <tr class="row_accounting">
+                  <td class="item">Accounting</td>
+                  <!-- <td class="item_value"><span>20</span> * $0.5</td> -->
+                  <td class="result">$35</td>
+                </tr>
+                <tr class="row_terminal">
+                  <td class="item">Terminal</td>
+                  <!-- <td class="item_value"><span>20</span> * $0.5</td> -->
+                  <td class="result">$5</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="total_sum">Total <span class="sum">$0</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FORM -->
     <section id="contact" class="form">
       <div class="container">
@@ -206,10 +271,10 @@
                 <input type="email" name="email" id="email" />
               </div>
             </div>
-            <label class="accept_regulations">
+            <label class="accept_checkbox">
               <input type="checkbox" />
               <span></span>
-              <p class="regulations">
+              <p class="selection_description">
                 I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the
                 European Parliament &rsquo;s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard
                 to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
@@ -234,5 +299,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/app.js"></script>
   </body>
 </html>
